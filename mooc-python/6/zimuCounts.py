@@ -68,8 +68,7 @@ def replacePunctuations(line):
 
 def processline(line, wordCounts):
     line = replacePunctuations(line)
-    words = [ch for ch in line]
-    for word in words:
+    for word in line:
         if word in wordCounts:
             wordCounts[word] += 1
         else:
